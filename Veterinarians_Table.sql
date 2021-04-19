@@ -5,12 +5,12 @@ CREATE TABLE Veterinarians (
 );
 -----------------------------------------
 INSERT INTO Veterinarians(vid, vName)
-VALUES(1001, John);
+VALUES(1001, 'John');
 INSERT INTO Veterinarians(vid, vName)
-VALUES(1002, David);
+VALUES(1002, 'David');
 INSERT INTO Veterinarians(vid, vName)
-VALUES(1003, Shara);
+VALUES(1003, 'Shara');
 INSERT INTO Veterinarians(vid, vName)
-VALUES(1004, Victor);
+VALUES(1004, 'Victor');
 INSERT INTO Veterinarians(vid, vName)
-VALUES(1005, Lora);
+VALUES(1005, 'Lora');
