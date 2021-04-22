@@ -46,7 +46,7 @@ INSERT INTO AGE(vid, vAge) VALUES(1003, 39);
 INSERT INTO AGE(vid, vAge) VALUES(1004, 60);
 INSERT INTO AGE(vid, vAge) VALUES(1005, 51);
 ----------------------------------------------
---Create View from table cs411246---
+--Create View from table Veterinarians in cs411246---
 CREATE OR REPLACE VIEW Vet_View
 AS SELECT vid, vName
 FROM Veterinarians.cs411246;
