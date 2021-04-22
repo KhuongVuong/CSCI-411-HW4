@@ -29,6 +29,11 @@ GRANT REFERENCES(vid) ON Veterinarians TO cs411233;
 SELECT vName, vAge
 FROM Veterinarians, AGE.cs411246
 WHERE vAge BETWEEN 40 AND 50; 
+--2.Insert new values to AGE table in cs411233--
+INSERT INTO AGE.cs411233(vid, vAge) VALUES (1006, 52);
+--3.Update new values to AGE table in cs411233--
+UPDATE AGE.cs411233 SET vAge = '59' WHERE vid = 1006;
+
 ----------------------------------------------
 ---CS411233---
 ----------------------------------------------
@@ -71,7 +76,7 @@ GRANT SELECT, INSERT, UPDATE ON AGE.cs411233 TO cs411246;
 ----------------------------------------------
 --Testing--
 --1.Insert new values into VIEW (Vet_View table) from cs411233--
-INSERT INTO Vet_View.cs411233 VALUES (1006, 'Terisa');
+INSERT INTO Vet_View.cs411233(vid, vName) VALUES (1006, 'Terisa');
 --2.Update a name from VIEW (Vet_View table) in cs411233--
 UPDATE Vet_View.cs411233 SET vName = 'David.J' WHERE vid = 1001;
 
