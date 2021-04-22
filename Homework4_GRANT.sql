@@ -19,18 +19,20 @@ INSERT INTO Veterinarians(vid, vName)
 VALUES(1005, 'Lora');
 -----------------------------------------
 --Grant permission to cs411233--
+--1.Grant SELECT on Veterinarians table--
 GRANT SELECT ON Veterinarians TO cs411233;
+--2.Grant REFERENCES on Veterinarians table--
 GRANT REFERENCES(vid) ON Veterinarians TO cs411233;
 ----------------------------------------------
 --Testing--
---1.Find the person who between 40 and 50--
+--1.Find the person who between 40 and 50 by join Veterinarians with AGE table from cs411246--
 SELECT vName, vAge
-FROM Veterinarians, AGE.cs411233
+FROM Veterinarians, AGE.cs411246
 WHERE vAge BETWEEN 40 AND 50; 
 ----------------------------------------------
 ---CS411233---
 ----------------------------------------------
---Create AGE table that references to Veterinarians table--
+--Create AGE table that references to Veterinarians table from cs411246--
 CREATE TABLE AGE(
     vid int,
     vAge int,
@@ -50,10 +52,13 @@ AS SELECT vid, vName
 FROM Veterinarians.cs411246;
 ----------------------------------------------
 ---Grant permission to cs411247---
+--1.Grant permission to insert and update VIEW(Vet_View)--
+GRANT INSERT, UPDATE ON Vet_Vew TO cs411247;
+--1.Grant all permission on table AGE--
 GRANT ALL ON AGE TO cs411247 WITH GRANT OPTION;
 ----------------------------------------------
 --Testing--
---1.Find the person name Lora--
+--1.Find the person name Lora and age by join AGE table with Veterinarians table from cs411246--
 SELECT vName, vAge
 FROM Veterinarians.cs411246, AGE
 WHERE Verterinarians.vid = AGE.vid
