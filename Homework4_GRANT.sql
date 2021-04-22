@@ -23,6 +23,8 @@ VALUES(1005, 'Lora');
 GRANT SELECT ON Veterinarians TO cs411233;
 --2.Grant REFERENCES on Veterinarians table--
 GRANT REFERENCES(vid) ON Veterinarians TO cs411233;
+--3.Grant INSERT on Veterinarians table--
+GRANT INSERT ON Veterinarians TO cs411233;
 ----------------------------------------------
 --Testing--
 --1.Find the person who between 40 and 50 by join Veterinarians with AGE table from cs411246--
@@ -68,6 +70,9 @@ SELECT vName, vAge
 FROM Veterinarians.cs411246, AGE
 WHERE Verterinarians.vid = AGE.vid
 AND vName = 'Lora';
+--2.Insert new values into Veterinarians table in cs411246--
+INSERT INTO Veterinarians.cs411246(vid, vName) VALUES (1007, 'Catherin');
+
 ----------------------------------------------
 ---CS411247---
 ----------------------------------------------
