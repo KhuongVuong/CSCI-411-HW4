@@ -81,10 +81,10 @@ GRANT SELECT, INSERT, UPDATE ON AGE.cs411233 TO cs411246;
 ----------------------------------------------
 --Testing--
 --1.Insert new values into VIEW (Vet_View table) from cs411233--
-INSERT INTO cs411246.Vet_View(vid, vName) VALUES (1006, 'Terisa');
+INSERT INTO cs411233.Vet_View(vid, vName) VALUES (1006, 'Terisa');
 --2.Update a name from VIEW (Vet_View table) in cs411233--
-UPDATE cs411246.Vet_View SET vName = 'David.J' WHERE vid = 1001;
+UPDATE cs411233.Vet_View SET vName = 'David.J' WHERE vid = 1001;
 
 --Display result (1 and 2)--
 SELECT *
-FROM cs411246.Vet_View;
+FROM cs411233.Vet_View;
