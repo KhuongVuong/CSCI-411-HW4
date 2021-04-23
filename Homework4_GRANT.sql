@@ -60,7 +60,7 @@ FROM cs411246.Veterinarians;
 ----------------------------------------------
 ---Grant permission to cs411247---
 --1.Grant permission to insert and update VIEW(Vet_View)--
-GRANT INSERT, UPDATE ON Vet_Vew TO cs411247;
+GRANT SELECT, INSERT, UPDATE ON Vet_Vew TO cs411247;
 --1.Grant all permission on table AGE--
 GRANT ALL ON AGE TO cs411247 WITH GRANT OPTION;
 ----------------------------------------------
