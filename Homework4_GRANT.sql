@@ -40,7 +40,7 @@ UPDATE cs411233.AGE SET vAge = '59' WHERE vid = 1006;
 ---CS411233---
 ----------------------------------------------
 --Create AGE table that references to Veterinarians table from cs411246--
-CREATE TABLE AGE(
+CREATE TABLE Age(
     vid int,
     vAge int,
     PRIMARY KEY(vid),
