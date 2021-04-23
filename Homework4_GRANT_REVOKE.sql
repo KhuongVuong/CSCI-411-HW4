@@ -8,16 +8,16 @@ GRANT REFERENCES(vid) ON Veterinarians TO cs411247;
 ----------------------------------------------
 --Testing--
 --1.Insert into VIEW(View_Age) new values--
-INSERT INTO cs411247.View_Age(vid, vName) VALUES(1006, 41);
-INSERT INTO cs411247.View_Age(vid, vName) VALUES(1007, 49);
+INSERT INTO cs411247.Age_View(vid, vName) VALUES(1006, 41);
+INSERT INTO cs411247.Age_View(vid, vName) VALUES(1007, 49);
 --2.Update VIEW(View_Age) with new values--
-UPDATE cs411247.View_Age SET vAge = 51 WHERE vid = 1006;
-UPDATE cs411247.View_Age SET vAge = 47 WHERE vid = 1001;
+UPDATE cs411247.Age_View SET vAge = 51 WHERE vid = 1006;
+UPDATE cs411247.Age_View SET vAge = 47 WHERE vid = 1001;
 --3.Find person name of the person from vid = 1003--
-SELECT vid, vName
-FROM Veterinarians, cs411247.View_Age
-WHERE Veterinarians.vid = cs411247.View_Age.vid
-AND vid = 1003;
+SELECT v.vid, v.vName
+FROM Veterinarians v, cs411247.View_Age
+WHERE v.vid = cs411247.View_Age.vid
+AND v.vid = 1003;
 ----------------------------------------------
 ---CS411247---
 ----------------------------------------------
